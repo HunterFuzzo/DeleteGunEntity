@@ -15,7 +15,7 @@ end)
 -- asynchrone function
 
 Citizen.CreateThread(function()
-	local playerPed = GetPlayerPed(-1)
+	local playerPed = GetPlayerPed()
 	local delgun = "weapon_snspistol_mk2"
 	
 	while true do
@@ -41,12 +41,12 @@ end)
 -- function
 
 function giveWeapon(hashKey) -- give weapon
-    GiveWeaponToPed(GetPlayerPed(-1), GetHashKey(hash), 250, false, false)
+    GiveWeaponToPed(GetPlayerPed(), GetHashKey(hash), 250, false, false)
 end
 
 function weaponComponent(weaponHash, component) -- give component
-    if HasPedGotWeapon(GetPlayerPed(-1), GetHashKey(weaponHash), false) then
-        GiveWeaponComponent(GetPlayerPed(-1), GetHashKey(weaponHash), GetHashKey(component))
+    if HasPedGotWeapon(GetPlayerPed(), GetHashKey(weaponHash), false) then
+        GiveWeaponComponent(GetPlayerPed(), GetHashKey(weaponHash), GetHashKey(component))
     end
 end
 
