@@ -1,7 +1,7 @@
 ESX = nil
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
-local playergroup = nil
+local playerGroup = nil
 
 RegisterCommand("delgun", function(source, args, rawcommand)
 	if args[1] == nil then
