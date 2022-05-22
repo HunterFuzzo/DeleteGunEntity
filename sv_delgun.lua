@@ -1,3 +1,5 @@
+-- check if the player has permission
+
 ESX = nil
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
