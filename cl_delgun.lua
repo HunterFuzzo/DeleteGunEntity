@@ -52,12 +52,12 @@ end
 
 function giveDelgun() -- give delgun to ped
 	giveWeapon(delgun)
-            weaponComponent(delgun, "COMPONENT_SNS_PISTOL_MK2_CAMO_IND_01_SLIDE")
-            weaponComponent(delgun, "COMPONENT_AT_PI_SUPP_02")
-            weaponComponent(delgun, "COMPONENT_SNSPISTOL_MK2_CLIP_02")
-            weaponComponent(delgun, "COMPONENT_AT_PI_RAIL_02")
-            weaponComponent(delgun, "COMPONENT_AT_PI_FLSH_03")
-			SetPedInfiniteAmmo(playerPed, true, delgun)
+        weaponComponent(delgun, "COMPONENT_SNS_PISTOL_MK2_CAMO_IND_01_SLIDE")
+        weaponComponent(delgun, "COMPONENT_AT_PI_SUPP_02")
+        weaponComponent(delgun, "COMPONENT_SNSPISTOL_MK2_CLIP_02")
+        weaponComponent(delgun, "COMPONENT_AT_PI_RAIL_02")
+        weaponComponent(delgun, "COMPONENT_AT_PI_FLSH_03")
+	SetPedInfiniteAmmo(playerPed, true, delgun)
 end
 
 function removeDelgun() -- remove delgun from ped
