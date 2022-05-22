@@ -3,7 +3,7 @@ TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 local playerGroup = nil
 
-RegisterCommand("delgun", function(source, args, rawcommand)
+RegisterCommand("delgun", function(source, args)
 	if args[1] == nil then
 		ESX.ShowNotification("~r~An argument is missing")
 		return
