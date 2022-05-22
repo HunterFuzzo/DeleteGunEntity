@@ -29,7 +29,6 @@ Citizen.CreateThread(function()
 					SetEntityAsMissionEntity(entity, true, true)
 					DeleteEntity(entity)
 					DeleteVehicle(vehicle)
-					end
 				end
 			end
 		else
