@@ -6,6 +6,10 @@ TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 local playerGroup = nil
 
 RegisterCommand("delgun", function(source, args)
+        local _src = source
+        local xPlayer = ESX.GetPlayerFromId(_src)
+	local playerGroup = xPlayer.getGroup() 
+
 	if args[1] == nil then
 		ESX.ShowNotification("~r~An argument is missing")
 		return
@@ -15,9 +19,6 @@ RegisterCommand("delgun", function(source, args)
 		ESX.ShowNotification("~r~Argument is incorrect or invalid")
 		return
 	end
-
-	local xPlayer = ESX.GetPlayerFromId(source)
-	local playerGroup = xPlayer.getGroup()
 
 	if playerGroup ~= "user" then
 		if args[1] == "on" then
