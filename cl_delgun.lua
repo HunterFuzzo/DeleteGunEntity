@@ -44,9 +44,7 @@ function giveWeapon(hashKey) -- give weapon
 end
 
 function weaponComponent(weaponHash, component) -- give component
-    if HasPedGotWeapon(GetPlayerPed(), GetHashKey(weaponHash), false) then
-        GiveWeaponComponent(GetPlayerPed(), GetHashKey(weaponHash), GetHashKey(component))
-    end
+    GiveWeaponComponent(GetPlayerPed(), GetHashKey(weaponHash), GetHashKey(component))
 end
 
 function giveDelgun() -- give delgun to ped
