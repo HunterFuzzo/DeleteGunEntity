@@ -37,7 +37,7 @@ Citizen.CreateThread(function()
 	end
 end)
 
--- function
+-- functions
 
 function giveWeapon(hashKey) -- give weapon
     GiveWeaponToPed(GetPlayerPed(), GetHashKey(hash), 250, false, false)
