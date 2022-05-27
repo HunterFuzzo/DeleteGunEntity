@@ -3,13 +3,13 @@ local toggle = false
 RegisterNetEvent('fine:delgunOn')
 AddEventHandler('fine:delgunOn', function()
 	toggle = true
-	notify("~g~Vehicle Delete Gun Enabled!")
+	showNotification("~g~Vehicle Delete Gun Enabled!")
 end)
 
 RegisterNetEvent('fine:delgunOff')
 AddEventHandler('fine:delgunOff', function()
 	toggle = false
-	notify("~r~Vehicle Delete Gun Disabled!")
+	showNotification("~r~Vehicle Delete Gun Disabled!")
 end)
 
 -- asynchrone function
@@ -69,7 +69,7 @@ function getEntity(player) -- get if player is free aiming
 	return entity
 end
 
-function notify(text) -- notification
+function showNotification(text) -- notification
 	SetNotificationTextEntry("STRING")
 	AddTextComponentString(text)
 	DrawNotification(false, false)
