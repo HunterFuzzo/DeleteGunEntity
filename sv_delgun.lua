@@ -30,4 +30,5 @@ RegisterCommand("delgun", function(source, args)
 		end
 	else
 		CancelEvent()
+	end
 end)
