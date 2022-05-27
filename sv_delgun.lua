@@ -8,10 +8,10 @@ Citizen.CreateThread(function()
 end)
 
 RegisterCommand("delgun", function(source, args)
-    local _src = source
-    local xPlayer = ESX.GetPlayerFromId(_src)
+        local _src = source
+        local xPlayer = ESX.GetPlayerFromId(_src)
 	local playerGroup = xPlayer.getGroup() 
-
+	
 	if args[1] == nil then
 		ESX.ShowNotification("~r~An argument is missing")
 		return
