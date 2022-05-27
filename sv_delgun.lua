@@ -28,7 +28,7 @@ RegisterCommand("delgun", function(source, args)
 		if args[1] == "off" then
 			TriggerClientEvent('fine:delgunOff', source)
 		end
-	else
+	elseif
 		CancelEvent()
 	end
 end)
