@@ -8,8 +8,8 @@ end)
 
 RegisterNetEvent('fine:delgunOff')
 AddEventHandler('fine:delgunOff', function()
-	toggle = false
-	ESX.ShowNotification("~r~Vehicle Delete Gun Disabled!")
+    toggle = false
+    ESX.ShowNotification("~r~Vehicle Delete Gun Disabled!")
 end)
 
 -- asynchrone function
@@ -20,17 +20,17 @@ Citizen.CreateThread(function()
         	
     while true do
         Citizen.Wait(0)
-		      if toggle then
-			        giveDelgun(playerPed)
-			        if IsPlayerFreeAiming(playerPed) then
-				            local entity = getEntity(PlayerId())
-				            if IsPedShooting(playerPed) then
-					               SetEntityAsMissionEntity(entity, true, true)
-					               DeleteEntity(entity)
-				            end
-			        end
-		      else
-			        removeDelgun()
+        if toggle then
+	    giveDelgun(playerPed)
+	    if IsPlayerFreeAiming(playerPed) then
+	       local entity = getEntity(PlayerId())
+	       if IsPedShooting(playerPed) then
+		    SetEntityAsMissionEntity(entity, true, true)
+		    DeleteEntity(entity)
+	       end
+            end
+        else
+            removeDelgun()
         end
     end
 end)
@@ -52,12 +52,12 @@ function giveDelgun() -- give delgun to ped
     weaponComponent(delgun, "COMPONENT_SNSPISTOL_MK2_CLIP_02")
     weaponComponent(delgun, "COMPONENT_AT_PI_RAIL_02")
     weaponComponent(delgun, "COMPONENT_AT_PI_FLSH_03")
-	   SetPedInfiniteAmmo(playerPed, true, delgun)
+    SetPedInfiniteAmmo(playerPed, true, delgun)
 end
 
 function removeDelgun() -- remove delgun from ped
     SetPedInfiniteAmmo(playerPed, false, delgun)
-	   RemoveWeaponFromPed(playerPed, delgun)
+    RemoveWeaponFromPed(playerPed, delgun)
 end
 
 function getEntity(player) -- get if player is free aiming
