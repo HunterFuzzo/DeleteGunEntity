@@ -2,7 +2,6 @@ ESX = nil
 
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
-
 RegisterCommand("delgun", function(source, args)
     local _src = source
     local xPlayer = ESX.GetPlayerFromId(_src)
