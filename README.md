@@ -1,6 +1,9 @@
 # DeleteGunEntity
 
 Delete gun Entity for FiveM (work with a command)
+qskdjqlsjdq
+kqsdlqjsd
+piqsdi
 
 ### How it work ?
 
